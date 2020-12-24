@@ -1,0 +1,69 @@
+#include<iostream>
+
+using namespace std;
+int sum_testcase1(int arr[],int n) 
+{
+int sum=0;
+for(int i=0;i<n;i++)
+{
+sum+=arr[i];
+}
+return sum;
+}
+int sum_testcase2(int abc[],int k) 
+{
+int add=0;
+for(int j=0;j<k;j++)
+{
+
+add=add+abc[j];
+
+}
+return  add;
+
+}
+int compare(int z, int y) 
+{
+if(z>y)
+{
+return z;
+}
+return y;
+}
+
+
+int main()
+{
+
+int t, z, y;//t =testcase
+cin>>t;
+while(t>0)
+{
+int n, k, f;
+cin>>n>>k;//n= size of array
+int arr[n];
+for(int i=0;i<n;i++)
+{
+cin>>arr[i];
+}
+
+
+
+int abc[k];
+for(int j=0; j<k;j++)
+{
+cin>>abc[j];
+}
+
+z=sum_testcase1(arr, n);
+ y=sum_testcase2(abc, k);
+
+f=compare(z,y) ;
+
+(f==z) ? cout<<"C1":cout<<"C2";
+t=t-1;
+}
+
+return 0;
+
+}
